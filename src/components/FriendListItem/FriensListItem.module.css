@@ -1,0 +1,21 @@
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
+
+.status {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 170px;
+  gap: 20px;
+}

@@ -1,5 +1,5 @@
 import css from './Statistics.module.css';
-import getRandomHexColor from 'components/randomColor';
+import getRandomHexColor from 'helpers/randomColor';
 
 const Statistics = ({ stats, title }) => {
   const statisticList = stats.map(elem => (

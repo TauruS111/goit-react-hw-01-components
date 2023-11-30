@@ -1,13 +1,18 @@
+import FriendList from './FriendList/FriendList';
+import Profile from './Profile/Profile';
+import Statistics from './Statistics/Statistics';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
+import Heading from './Heading/Heading';
+
 import user from '../data/user.json';
 import data from '../data/data.json';
-
-import Profile from './User/User';
-import Statistics from './Statistics/Statistics';
+import friends from '../data/friends.json';
+import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
     <>
-      <h2 className="task"> PROFILE</h2>
+      <Heading text="PROFILE" tag="h1" />
       <Profile
         username={user.username}
         tag={user.tag}
@@ -15,10 +20,12 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <h2 className="task">STATISTICS</h2>
+      <Heading text="STATISTICS" />
       <Statistics title="Upload stats" stats={data} />
-      <h2 className="task">FRIEND LIST</h2>
-      <h2 className="task">TRANSACTION HISTORY</h2>
+      <Heading text="FRIEND LIST" />
+      <FriendList friends={friends} />
+      <Heading text="TRANSACTION HISTORY" />
+      <TransactionHistory transactions={transactions} />
     </>
   );
 };
